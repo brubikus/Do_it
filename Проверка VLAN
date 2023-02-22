@@ -1,0 +1,13 @@
+﻿#$language = "VBScript"
+#$interface = "1.0"
+
+crt.Screen.Synchronous = True
+
+' This automatically generated script may need to be
+' edited in order to work correctly.
+
+Sub Main
+ V=InputBox("#VLAN","Alcatel - ввод данных","990") 'Считываем номер vlan в переменную V
+ crt.Screen.Send "configure vlan shub id "+V & chr(13) 	
+ crt.Screen.Send "info" & chr(13)
+End Sub
